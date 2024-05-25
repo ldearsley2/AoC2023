@@ -2,19 +2,19 @@ def part1(file):
     total = 0
     with open(file) as f:
         for line in f:
-           first = ""
-           last = ""
+            first = ""
+            last = ""
            
-           for char in line:
-               if char.isdigit():
-                   if first == "":
-                       first, last = char, char
-                   else:
-                       last = char
+            for char in line:
+                if char.isdigit():
+                    if first == "":
+                        first, last = char, char
+                    else:
+                        last = char
 
 
-           val = int(f"{first}{last}")
-           total += val
+            val = int(f"{first}{last}")
+            total += val
 
     return total
 
