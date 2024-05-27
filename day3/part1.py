@@ -34,6 +34,9 @@ def find_engine_numbers(line):
             found = True
             part.append((index, char))
 
+    if found:
+        parts.append(part)
+
     return parts
 
 def find_symbol_locations(line):
@@ -85,4 +88,4 @@ def valid_parts(eng_numbers, sym_locations):
 #print(find_engine_numbers("..35..633."))
 #print(find_symbol_locations("..35.*633."))
 
-print(process_file("test_input.txt"))
+print(process_file("input.txt"))
