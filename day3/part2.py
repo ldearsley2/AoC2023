@@ -82,7 +82,7 @@ def process_file(file):
     total = 0
     with open(file) as f:
         for line in f:
-            line_arr.append(line.rstrip())
+            line_arr.append(line.rstrip() + ".")
 
     gear_locations = []
     engine_numbers = []
