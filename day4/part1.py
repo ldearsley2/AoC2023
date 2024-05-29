@@ -47,15 +47,23 @@ def process_scratchcards_parttwo(file):
         card_winning_numbers[i + 1] = calculate_winners(
             card_numbers[i], winning_numbers[i]
         )
+    print(card_winning_numbers)
 
     card_store = {}
     for i in range(len(card_numbers)):
         card_store[i + 1] = 1
 
-    for k, v in card_winning_numbers.items():
-        pass
+    for k, v in card_store.items():
+        for i in range(k + 1, k + 1 + card_winning_numbers[k]):
+            card_store[i] += v
 
     print(card_store)
+
+    total_card_count = 0
+    for k, v in card_store.items():
+        total_card_count += v
+
+    print(total_card_count)
 
 
 def calculate_winners(card_nums, winning_nums):
@@ -67,4 +75,4 @@ def calculate_winners(card_nums, winning_nums):
     return total_nums
 
 
-print(process_scratchcards_parttwo("test_input.txt"))
+process_scratchcards_parttwo("input.txt")
