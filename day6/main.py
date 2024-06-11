@@ -28,7 +28,13 @@ def main():
         else:
             total *= get_hold_times(int(distance), int(times[i]))
 
+    part2_time = "".join(times)
+    part2_distance = "".join(distances)
+
+    part2_total = get_hold_times(int(part2_distance), int(part2_time))
+
     print(total)
+    print(part2_total)
 
 
 main()
